@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # dataloader for training
 train_dataloader = TrainDataLoader(
 	in_path = "./benchmarks/OMKG/", 
-	nbatches = 100,
+	nbatches = 150,
 	threads = 8, 
 	sampling_mode = "normal", 
 	bern_flag = 1, 
@@ -33,7 +33,7 @@ transe = TransE(
 
 model_e = NegativeSampling(
 	model = transe, 
-	loss = MarginLoss(margin = 5.0),
+	loss = MarginLoss(margin = 4.0),
 	batch_size = train_dataloader.get_batch_size())
 
 transr = TransR(
@@ -61,7 +61,7 @@ transe.save_parameters("./result/transr_transe.json")
 # train transr
 # transr.set_parameters(parameters)
 transr.ent_embeddings = transe.ent_embeddings
-trainer = Trainer(model = model_r, data_loader = train_dataloader, train_times = 1000, alpha = 1.0, use_gpu = False)
+trainer = Trainer(model = model_r, data_loader = train_dataloader, train_times = 1000, alpha = 0.1, use_gpu = False)
 trainer.run()
 transr.save_checkpoint('./checkpoint/transr.ckpt')
 

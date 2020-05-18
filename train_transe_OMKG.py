@@ -32,12 +32,12 @@ transe = TransE(
 # define the loss function
 model = NegativeSampling(
 	model = transe, 
-	loss = MarginLoss(margin = 10.0),
+	loss = MarginLoss(margin = 4.0),
 	batch_size = train_dataloader.get_batch_size()
 )
 
 # train the model
-trainer = Trainer(model = model, data_loader = train_dataloader, train_times = 1000, alpha = 1.0, use_gpu = False)
+trainer = Trainer(model = model, data_loader = train_dataloader, train_times = 1000, alpha = 0.1, use_gpu = False)
 trainer.run()
 
 relationship = trainer.model.model.rel_embeddings.weight.data

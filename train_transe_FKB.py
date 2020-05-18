@@ -37,7 +37,6 @@ f.close()
 
 rel_embedding = nn.Embedding.from_pretrained(torch.from_numpy(np.array(extract_path_vec_list).astype(dtype='float64')).float())
 
-
 # define the model
 transe = TransE(
 	ent_tot = train_dataloader.get_ent_tot(),

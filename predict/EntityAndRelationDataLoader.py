@@ -1,19 +1,28 @@
 import os
 
+
 class EntityAndRelationDataLoader(object):
-    def __init__(self, base_path):
+    def __init__(self, base_path, o_m_base_path):
         self.base_path = base_path
+        self.o_m_base_path = o_m_base_path
 
     def acquire_entity(self):
         entity_list = []
-        print(os.path.abspath('.'))
-        print(os.path.abspath(self.base_path+'entity2id.txt'))
         with open(self.base_path+'entity2id.txt') as f:
             f.readline()
             for line in f.readlines():
                 entity_list.append(line.split('\t')[0])
         f.close()
         return entity_list
+
+    def acquire_o_m_base_path(self):
+        o_m_entity_list = []
+        with open(self.o_m_base_path+'entity2id.txt') as f:
+            f.readline()
+            for line in f.readlines():
+                o_m_entity_list.append(line.split('\t')[0])
+        f.close()
+        return o_m_entity_list
 
     def acquire_path(self):
         path_vec_list = []

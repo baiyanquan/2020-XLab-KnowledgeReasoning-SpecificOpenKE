@@ -11,7 +11,7 @@ import torch
 
 # dataloader for training
 train_dataloader = TrainDataLoader(
-	in_path = "./benchmarks/FKB/", 
+	in_path = "./benchmarks/FKB2/",
 	nbatches = 100,
 	threads = 8, 
 	sampling_mode = "normal", 
@@ -22,7 +22,7 @@ train_dataloader = TrainDataLoader(
 
 # dataloader for test
 test_dataloader = TestDataLoader(
-	in_path = "./benchmarks/FKB/",
+	in_path = "./benchmarks/FKB2/",
 	sampling_mode = 'link')
 
 path_vec_list = []
@@ -32,7 +32,7 @@ with open("./benchmarks/OMKG/path2vec.txt") as f:
 f.close()
 
 extract_path_vec_list = []
-with open("./benchmarks/FKB/relation2id.txt") as f:
+with open("./benchmarks/FKB2/relation2id.txt") as f:
 	f.readline()
 	for line in f.readlines():
 		extract_path_vec_list.append(path_vec_list[int(line.split('\t')[0])])
@@ -78,12 +78,16 @@ plt.savefig("./embedding/TransR/loss_epoch.png")
 
 entity = trainer.model.model.ent_embeddings.weight.data
 relationship = trainer.model.model.rel_embeddings.weight.data
+transfer_matrix = trainer.model.model.transfer_matrix.weight.data
 
 entity_np = np.array(entity)
 np.savetxt('./embedding/TransR/fault_dataset_entity_result.txt',entity_np)
 
 relationship_np = np.array(relationship)
 np.savetxt('./embedding/TransR/fault_dataset_relationship_result.txt',relationship_np)
+
+transfer_matrix_np = np.array(transfer_matrix)
+np.savetxt('./embedding/TransR/fault_dataset_transfer_matrix_result.txt',transfer_matrix_np)
 
 # test the model
 transr.load_checkpoint('./checkpoint/fault_dataset_transr.ckpt')

@@ -3,8 +3,7 @@
 http://10.60.38.181/Service	1
 2019-07-01T10:12:17Z	2
 2019-07-02T13:44:49Z	3
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"rabbitmq\\"},\\"name\\":\\"rabbitmq\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"rabbitmq\\",\\"port\\":5672,\\"targetPort\\":5672},{\\"name\\":\\"rabbitmq-mangement\\",\\"port\\":15672,\\"targetPort\\":15672}],\\"selector\\":{\\"name\\":\\"rabbitmq\\"}}}
-	4
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"rabbitmq\\"},\\"name\\":\\"rabbitmq\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"rabbitmq\\",\\"port\\":5672,\\"targetPort\\":5672},{\\"name\\":\\"rabbitmq-mangement\\",\\"port\\":15672,\\"targetPort\\":15672}],\\"selector\\":{\\"name\\":\\"rabbitmq\\"}}}	4
 docker://a2d7853204ce8b0555430400ec273a0d8f75888c201aeff1780cb16e001e8f4a	5
 weaveworksdemos/shipping:0.4.8	6
 front-end-858b4ff57-dbdck	7
@@ -17,16 +16,14 @@ http://10.60.38.181/container/front-end	13
 http://10.60.38.181/pod/catalogue-db	14
 http://10.60.38.181/Namespace	15
 0	16
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"shipping\\"},\\"name\\":\\"shipping\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"shipping\\"}}}
-	17
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"shipping\\"},\\"name\\":\\"shipping\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"shipping\\"}}}	17
 3	18
 5	19
 804	20
 10.68.99.176	21
 99cbcbb88	22
 2019-07-02T12:35:07Z	23
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"user-db\\"},\\"name\\":\\"user-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"user-db\\"}}}
-	24
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"user-db\\"},\\"name\\":\\"user-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"user-db\\"}}}	24
 http://10.60.38.181/pod/catalogue	25
 docker://cd9e93dc69032adb392a083b5496acf24003fd55934d868c0b56a2214c60016a	26
 http://10.60.38.181/container/orders-db	27
@@ -66,16 +63,13 @@ docker://5598466f6221bb57dbd645cbbf23794b6a0bc82ddd08c473158ea5169332d8f6	58
 http://10.60.38.181/service/user-db	61
 orders-db	62
 2019-07-01T10:16:20Z	63
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"user\\"},\\"name\\":\\"user\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"user\\"}}}
-	64
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"carts-db\\"},\\"name\\":\\"carts-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"carts-db\\"}}}
-	65
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"user\\"},\\"name\\":\\"user\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"user\\"}}}	64
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"carts-db\\"},\\"name\\":\\"carts-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"carts-db\\"}}}	65
 975	66
 http://www.w3.org/2002/07/owl#ObjectProperty	67
 172.20.3.0/24	68
 weaveworksdemos/payment:0.4.3	69
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"payment\\"},\\"name\\":\\"payment\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"payment\\"}}}
-	70
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"payment\\"},\\"name\\":\\"payment\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"payment\\"}}}	70
 2019-07-01T10:17:48Z	71
 2019-07-01T10:12:22Z	72
 http://10.60.38.181/service/front-end	73
@@ -129,8 +123,7 @@ http://10.60.38.181/namespace/monitoring	120
 10.68.62.166	121
 192.168.199.31	122
 192.168.199.32	123
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"session-db\\"},\\"name\\":\\"session-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":6379,\\"targetPort\\":6379}],\\"selector\\":{\\"name\\":\\"session-db\\"}}}
-	124
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"session-db\\"},\\"name\\":\\"session-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":6379,\\"targetPort\\":6379}],\\"selector\\":{\\"name\\":\\"session-db\\"}}}	124
 http://10.60.38.181/service/rabbitmq	125
 http://10.60.38.181/temp/171	126
 http://10.60.38.181/temp/170	127
@@ -184,8 +177,7 @@ http://10.60.38.181/namespace/sock-shop	173
 2019-07-01T10:09:35Z	175
 docker://aa33cd3d47abdb90bc0648deec243ecb4d88cdeec927b06622f0268385c04e96	176
 6b57d5cc79	177
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"catalogue\\"},\\"name\\":\\"catalogue\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"catalogue\\"}}}
-	178
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"catalogue\\"},\\"name\\":\\"catalogue\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"catalogue\\"}}}	178
 {\\"VtepMAC\\":\\"32:ac:f6:67:1d:d8\\"}	179
 http://10.60.38.181/temp/140	180
 http://10.60.38.181/temp/142	181
@@ -296,10 +288,8 @@ http://10.60.38.181/temp/15	284
 weaveworksdemos/catalogue:0.3.5	286
 http://10.60.38.181/temp/19	287
 172.20.4.16	288
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"front-end\\"},\\"name\\":\\"front-end\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"protocol\\":\\"TCP\\",\\"targetPort\\":8079}],\\"selector\\":{\\"name\\":\\"front-end\\"},\\"type\\":\\"LoadBalancer\\"}}
-	289
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"orders-db\\"},\\"name\\":\\"orders-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"orders-db\\"}}}
-	290
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"front-end\\"},\\"name\\":\\"front-end\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"protocol\\":\\"TCP\\",\\"targetPort\\":8079}],\\"selector\\":{\\"name\\":\\"front-end\\"},\\"type\\":\\"LoadBalancer\\"}}	289
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"orders-db\\"},\\"name\\":\\"orders-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":27017,\\"targetPort\\":27017}],\\"selector\\":{\\"name\\":\\"orders-db\\"}}}	290
 http://10.60.38.181/service/catalogue	291
 http://10.60.38.181/temp/21	292
 172.20.1.0/24	293
@@ -355,8 +345,7 @@ linux	342
 http://10.60.38.181/pod/front-end	343
 docker-pullable://redis@sha256:7d2a7f4444bf4728f79360cc7b36b9537ab73782284e90d3e07f6098ffe92b71	344
 65769d99d7	345
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"orders\\"},\\"name\\":\\"orders\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"orders\\"}}}
-	346
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"orders\\"},\\"name\\":\\"orders\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"orders\\"}}}	346
 10.68.108.187	347
 80	348
 docker-pullable://weaveworksdemos/carts@sha256:434d2f5a6e0e8beef1f253fe96f45b8437a703125fc003434c5282ecf8969a4f	349
@@ -378,8 +367,7 @@ http://10.60.38.181/temp/77	364
 2019-07-02T12:35:45Z	365
 NodePort	366
 queue-master-77d854c647-qbgwq	367
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{\\"prometheus.io/path\\":\\"/prometheus\\"},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"queue-master\\"},\\"name\\":\\"queue-master\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"queue-master\\"}}}
-	368
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{\\"prometheus.io/path\\":\\"/prometheus\\"},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"queue-master\\"},\\"name\\":\\"queue-master\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"queue-master\\"}}}	368
 payment	369
 http://10.60.38.181/temp/83	370
 http://10.60.38.181/temp/82	371
@@ -419,8 +407,7 @@ http://10.60.38.181/temp/99	404
 carts-db	405
 2019-07-01T10:10:14Z	406
 2019-07-02T12:36:27Z	407
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"catalogue-db\\"},\\"name\\":\\"catalogue-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":3306,\\"targetPort\\":3306}],\\"selector\\":{\\"name\\":\\"catalogue-db\\"}}}
-	408
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"catalogue-db\\"},\\"name\\":\\"catalogue-db\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":3306,\\"targetPort\\":3306}],\\"selector\\":{\\"name\\":\\"catalogue-db\\"}}}	408
 docker://616d03282334e18bd2256735838b99e0bc5eca8db90793fada3a5a2200081b87	409
 http://10.60.38.181/pod/session-db	410
 docker-pullable://weaveworksdemos/catalogue-db@sha256:7ba74ec9adf88f6625b8d85d3323d1ee5232b39877e1590021ea485cf9457251	411
@@ -510,11 +497,9 @@ http://10.60.38.181/temp/69	494
 http://10.60.38.181/temp/68	495
 http://10.60.38.181/temp/67	496
 http://10.60.38.181/temp/66	497
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"front-end\\"},\\"name\\":\\"front-end-external\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"nodePort\\":30001,\\"port\\":80,\\"protocol\\":\\"TCP\\",\\"targetPort\\":8079}],\\"selector\\":{\\"name\\":\\"front-end\\"},\\"type\\":\\"NodePort\\"}}
-	498
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"front-end\\"},\\"name\\":\\"front-end-external\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"nodePort\\":30001,\\"port\\":80,\\"protocol\\":\\"TCP\\",\\"targetPort\\":8079}],\\"selector\\":{\\"name\\":\\"front-end\\"},\\"type\\":\\"NodePort\\"}}	498
 10.68.65.33	499
-{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"carts\\"},\\"name\\":\\"carts\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"carts\\"}}}
-	500
+{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"k8s-app\\":\\"sock-shop\\",\\"name\\":\\"carts\\"},\\"name\\":\\"carts\\",\\"namespace\\":\\"sock-shop\\"},\\"spec\\":{\\"ports\\":[{\\"name\\":\\"sock-port\\",\\"port\\":80,\\"targetPort\\":80}],\\"selector\\":{\\"name\\":\\"carts\\"}}}	500
 http://10.60.38.181/temp/72	501
 http://10.60.38.181/temp/71	502
 user	503
