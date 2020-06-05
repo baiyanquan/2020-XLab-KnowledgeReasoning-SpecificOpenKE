@@ -26,11 +26,11 @@ for i in range(len(path)):
     for j in range(1, len(path[i])):
         normalized_entity = torch.tensor(entity2vec[path[i][j]])
         normalized_entity = F.normalize(normalized_entity, 2, 0)
-        vector += normalized_entity
+        vector *= normalized_entity
     path_info['vector'] = F.normalize(vector, 2, 0)
     path2vec.append(path_info)
 
-with open('path2vec.txt','w') as f:
+with open('path2vecM.txt','w') as f:
     for i in range(len(path2vec)):
         f.write(str(path2vec[i]['start']) + '\t' + str(path2vec[i]['end']) + '\t')
         f.write(str(path2vec[i]['vector'].numpy().tolist()) + '\n')

@@ -1,4 +1,4 @@
-from predict.Predictor import Predictor
+from predictM.Predictor import Predictor
 
 
 target_performance = [
@@ -62,6 +62,6 @@ for i in target_performance:
         predict_result[i] = 'invalid'
 pass
 
-with open('predict_result.txt', 'w') as f:
+with open('predict_result_m.txt', 'w') as f:
     f.write(str(predict_result))
 f.close()

@@ -47,7 +47,7 @@ transr = TransR(
 
 model_r = NegativeSampling(
 	model = transr,
-	loss = MarginLoss(margin = 3.0),
+	loss = MarginLoss(margin = 4.0),
 	batch_size = train_dataloader.get_batch_size()
 )
 

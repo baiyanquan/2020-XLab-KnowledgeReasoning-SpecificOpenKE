@@ -26,7 +26,7 @@ test_dataloader = TestDataLoader(
 	sampling_mode = 'link')
 
 path_vec_list = []
-with open("./benchmarks/OMKG/path2vec.txt") as f:
+with open("./benchmarks/OMKG/path2vecM.txt") as f:
 	for line in f.readlines():
 		path_vec_list.append(line.split('\t')[2].strip('[').strip(']\n').split(','))
 f.close()
@@ -66,7 +66,7 @@ for k,v in model_r.named_parameters():
 # transr.set_parameters(parameters)
 trainer = Trainer(model = model_r, data_loader = train_dataloader, train_times = 200, alpha = 1.0, use_gpu = False)
 trainer.run()
-transr.save_checkpoint('./checkpoint/fault_dataset_transr.ckpt')
+transr.save_checkpoint('./checkpoint/fault_dataset_transrM.ckpt')
 
 epoch = trainer.epoch
 loss = trainer.loss
@@ -81,15 +81,15 @@ relationship = trainer.model.model.rel_embeddings.weight.data
 transfer_matrix = trainer.model.model.transfer_matrix.weight.data
 
 entity_np = np.array(entity)
-np.savetxt('./embedding/TransR/fault_dataset_entity_result.txt',entity_np)
+np.savetxt('./embedding/TransR/fault_dataset_entity_resultM.txt',entity_np)
 
 relationship_np = np.array(relationship)
-np.savetxt('./embedding/TransR/fault_dataset_relationship_result.txt',relationship_np)
+np.savetxt('./embedding/TransR/fault_dataset_relationship_resultM.txt',relationship_np)
 
 transfer_matrix_np = np.array(transfer_matrix)
-np.savetxt('./embedding/TransR/fault_dataset_transfer_matrix_result.txt',transfer_matrix_np)
+np.savetxt('./embedding/TransR/fault_dataset_transfer_matrix_resultM.txt',transfer_matrix_np)
 
 # test the model
-transr.load_checkpoint('./checkpoint/fault_dataset_transr.ckpt')
+transr.load_checkpoint('./checkpoint/fault_dataset_transrM.ckpt')
 tester = Tester(model = transr, data_loader = test_dataloader, use_gpu = False)
 tester.run_link_prediction(type_constrain = False)

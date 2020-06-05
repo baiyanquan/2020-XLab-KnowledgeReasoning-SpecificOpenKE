@@ -10,7 +10,7 @@ import torch
 
 # dataloader for training
 train_dataloader = TrainDataLoader(
-	in_path = "./benchmarks/FKB/",
+	in_path ="benchmarks/FKB/",
 	nbatches = 100,
 	threads = 8, 
 	sampling_mode = "normal", 
@@ -20,7 +20,7 @@ train_dataloader = TrainDataLoader(
 	neg_rel = 0)
 
 # dataloader for test
-test_dataloader = TestDataLoader("./benchmarks/FKB/", "link")
+test_dataloader = TestDataLoader("benchmarks/FKB/", "link")
 
 path_vec_list = []
 with open("./benchmarks/OMKG/path2vec.txt") as f:
@@ -29,7 +29,7 @@ with open("./benchmarks/OMKG/path2vec.txt") as f:
 f.close()
 
 extract_path_vec_list = []
-with open("./benchmarks/FKB/relation2id.txt") as f:
+with open("benchmarks/FKB/relation2id.txt") as f:
 	f.readline()
 	for line in f.readlines():
 		extract_path_vec_list.append(path_vec_list[int(line.split('\t')[0])])
